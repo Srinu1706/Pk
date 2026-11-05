@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acoustic Solutions &amp; Soundproofing — PK Entertainment</title>
+  <meta name="description" content="Acoustic design, soundproofing, bass control, diffusion and MAPS modular panels for home theaters, studios, auditoriums and commercial spaces." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { ink: "#041B36", coal: "#072D59", panel: "#072D59", gold: "#FD5E88", goldlight: "#FF8EAD", cream: "#EAF8FF" },
+        fontFamily: { sans: ["Outfit", "sans-serif"], display: ['"Bebas Neue"', "sans-serif"], serif: ['"Cormorant Garamond"', "serif"] },
+      } },
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .wave-bars { display: flex; align-items: center; gap: 4px; height: 56px; }
+    .wave-bars i { display: block; width: 3px; background: linear-gradient(180deg, #46C8F5, #072D59); border-radius: 2px; animation: wave 1.6s ease-in-out infinite; }
+    @keyframes wave { 0%,100% { transform: scaleY(.25); } 50% { transform: scaleY(1); } }
+    .panel-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+    .panel-grid span { aspect-ratio: 1; border: 1px solid rgba(201,162,77,.25); background: linear-gradient(145deg, rgba(255,255,255,.05), rgba(255,255,255,.01)); transition: all .4s ease; }
+    .panel-grid span:hover { background: rgba(201,162,77,.22); border-color: rgba(201,162,77,.7); }
+  </style>
+</head>
+<body data-page="acoustics" class="bg-ink text-cream font-sans antialiased">
+
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero">
+      <img class="bg" src="assets/img/project3.jpg" alt="Acoustically treated cinema room" />
+      <div class="absolute inset-0 page-hero-shade"></div>
+      <div class="noise absolute inset-0"></div>
+      <div class="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8">
+        <p class="crumbs" data-reveal><a href="index.html">Home</a> &nbsp;/&nbsp; <span>Acoustic Solution</span></p>
+        <p class="eyebrow mt-6" data-reveal data-delay="60">The science of listening</p>
+        <h1 class="mt-4 text-white" data-reveal data-delay="120">ACOUSTIC <span class="text-gradient-gold">SOLUTION</span></h1>
+        <p class="mt-5 max-w-xl text-sm leading-relaxed text-white/55" data-reveal data-delay="180">
+          Great sound is not just better speakers. It is a room that lets every frequency arrive at every seat with clarity, weight and balance. We design that room.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4" data-reveal data-delay="240">
+          <a href="contact.html" class="btn btn-gold">Get an Acoustic Assessment</a>
+          <a href="#maps" class="btn btn-ghost">Discover MAPS</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section">
+      <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+        <div data-reveal="left">
+          <p class="eyebrow">Room first. Equipment second.</p>
+          <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl">
+            YOUR ROOM IS PART OF THE <span class="text-gradient-gold">SPEAKER</span>
+          </h2>
+          <p class="mt-6 text-sm leading-relaxed text-white/55">
+            Hard parallel walls create flutter echo. Glass reflects treble. Bare corners trap bass into a muddy boom. Even premium equipment cannot overcome a room that fights it. Acoustic design is how we remove that fight — deliberately, measurably and beautifully.
+          </p>
+          <p class="mt-4 text-sm leading-relaxed text-white/45">
+            We begin with measurements and modelling, then specify absorption, diffusion, bass control and isolation in the exact quantities and positions your room needs. The result is sound that feels effortless: dialogue you never strain for, bass you feel without boom, and detail that survives all the way to the back row.
+          </p>
+          <div class="mt-8 grid grid-cols-3 gap-4">
+            <div>
+              <p class="font-display text-4xl leading-none text-goldlight"><span data-count="35" data-suffix="%">35%</span></p>
+              <p class="mt-1 text-[9px] uppercase leading-relaxed tracking-[0.18em] text-white/40">Cleaner dialogue</p>
+            </div>
+            <div>
+              <p class="font-display text-4xl leading-none text-goldlight"><span data-count="50" data-suffix="%">50%</span></p>
+              <p class="mt-1 text-[9px] uppercase leading-relaxed tracking-[0.18em] text-white/40">Tighter bass</p>
+            </div>
+            <div>
+              <p class="font-display text-4xl leading-none text-goldlight"><span data-count="9" data-suffix=" dB">9 dB</span></p>
+              <p class="mt-1 text-[9px] uppercase leading-relaxed tracking-[0.18em] text-white/40">Less sound leak</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative" data-reveal="right">
+          <div class="border border-white/10 bg-[#121e3d] p-6 sm:p-8">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-[9px] uppercase tracking-[0.24em] text-gold">Live analysis</p>
+                <p class="mt-1 font-display text-3xl text-white">ROOM RESPONSE</p>
+              </div>
+              <span class="pill !text-[9px]"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>Calibrated</span>
+            </div>
+
+            <div class="wave-bars mt-8 items-end">
+              <i style="height: 22%; animation-delay: 0s"></i><i style="height: 48%; animation-delay: .12s"></i><i style="height: 72%; animation-delay: .24s"></i><i style="height: 95%; animation-delay: .36s"></i><i style="height: 60%; animation-delay: .48s"></i><i style="height: 38%; animation-delay: .6s"></i><i style="height: 82%; animation-delay: .72s"></i><i style="height: 55%; animation-delay: .84s"></i><i style="height: 30%; animation-delay: .96s"></i><i style="height: 68%; animation-delay: 1.08s"></i><i style="height: 44%; animation-delay: 1.2s"></i><i style="height: 88%; animation-delay: 1.32s"></i><i style="height: 52%; animation-delay: 1.44s"></i><i style="height: 34%; animation-delay: 1.56s"></i><i style="height: 74%; animation-delay: 1.68s"></i><i style="height: 46%; animation-delay: 1.8s"></i><i style="height: 26%; animation-delay: 1.92s"></i><i style="height: 58%; animation-delay: 2.04s"></i><i style="height: 36%; animation-delay: 2.16s"></i><i style="height: 20%; animation-delay: 2.28s"></i>
+            </div>
+
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div class="rounded border border-white/8 bg-white/[0.02] p-4">
+                <p class="text-[8px] uppercase tracking-[0.2em] text-white/35">Reverberation</p>
+                <p class="mt-1 font-display text-2xl text-goldlight">RT60 · 0.32s</p>
+              </div>
+              <div class="rounded border border-white/8 bg-white/[0.02] p-4">
+                <p class="text-[8px] uppercase tracking-[0.2em] text-white/35">Coverage</p>
+                <p class="mt-1 font-display text-2xl text-goldlight">±1.5 dB</p>
+              </div>
+            </div>
+
+            <div class="mt-6 panel-grid">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p class="mt-4 text-[9px] uppercase tracking-[0.2em] text-white/25">Illustrative measurement · actual results vary by room</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPS -->
+    <section id="maps" class="section relative overflow-hidden border-y border-white/8 bg-[#072D59]">
+      <div class="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-gold/5 blur-3xl"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-20 lg:px-8">
+        <div class="relative order-2 lg:order-1" data-reveal="left">
+          <img src="assets/img/project1.jpg" alt="Acoustic wall panels and star ceiling in a home theater" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+          <div class="absolute left-5 top-5 border border-white/20 bg-[#041B36]/75 px-4 py-3 backdrop-blur">
+            <p class="font-display text-2xl leading-none text-goldlight">M.A.P.S</p>
+            <p class="mt-1 text-[8px] uppercase tracking-[0.2em] text-white/45">Modular Acoustic<br />Panel System</p>
+          </div>
+          <div class="absolute bottom-5 right-5 border border-gold/30 bg-[#072D59]/90 px-5 py-3 backdrop-blur">
+            <p class="text-[8px] uppercase tracking-[0.2em] text-white/40">Serviceable by design</p>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2" data-reveal="right">
+          <p class="eyebrow">Signature invention</p>
+          <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl">
+            ANY DESIGN. <span class="text-gradient-gold">FULL ACCESS.</span> NO COMPROMISE.
+          </h2>
+          <p class="mt-6 text-sm leading-relaxed text-white/55">
+            This is one of the inventions by Dr. Himanshu Kumar (Mentor) — a system that not only allows any design pattern a designer can imagine, but also keeps the services behind the acoustic panels easy to reach. MAPS is today used by many of his students around the world.
+          </p>
+          <ul class="mt-8 space-y-4">
+            <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Modular panels in bespoke patterns, colours and finishes</li>
+            <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Hidden access to wiring, speakers and lighting services</li>
+            <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Predictable, repeatable acoustic performance</li>
+            <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Easy maintenance without damaging the room</li>
+          </ul>
+          <a href="contact.html" class="btn btn-gold mt-9">Specify MAPS for My Room</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREATMENT SERVICES -->
+    <section class="section">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="max-w-2xl" data-reveal>
+          <p class="eyebrow">What we treat</p>
+          <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl">A FULL ACOUSTIC <span class="text-gradient-gold">TOOLKIT</span></h2>
+          <p class="mt-5 text-sm leading-relaxed text-white/45">Every intervention has a purpose. We combine them in the right proportions for your room — never a one-size-fits-all panel pack.</p>
+        </div>
+
+        <div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="border-t border-white/10 pt-6" data-reveal>
+            <span class="font-display text-3xl text-gold/60">01</span>
+            <h3 class="mt-3 font-display text-2xl tracking-wide text-white">Absorption</h3>
+            <p class="mt-2 text-xs leading-relaxed text-white/45">Controlled absorption of mid and high frequencies to remove harsh reflections, echo and listener fatigue.</p>
+          </div>
+          <div class="border-t border-white/10 pt-6" data-reveal data-delay="60">
+            <span class="font-display text-3xl text-gold/60">02</span>
+            <h3 class="mt-3 font-display text-2xl tracking-wide text-white">Diffusion</h3>
+            <p class="mt-2 text-xs leading-relaxed text-white/45">Sculpted surfaces that scatter sound evenly — keeping the room lively and detailed instead of dead and flat.</p>
+          </div>
+          <div class="border-t border-white/10 pt-6" data-reveal data-delay="120">
+            <span class="font-display text-3xl text-gold/60">03</span>
+            <h3 class="mt-3 font-display text-2xl tracking-wide text-white">Bass Control</h3>
+            <p class="mt-2 text-xs leading-relaxed text-white/45">Pressure-based bass traps and tuned resonators that stop low frequencies from building up in corners and modes.</p>
+          </div>
+          <div class="border-t border-white/10 pt-6" data-reveal>
+            <span class="font-display text-3xl text-gold/60">04</span>
+            <h3 class="mt-3 font-display text-2xl tracking-wide text-white">Soundproofing</h3>
+            <p class="mt-2 text-xs leading-relaxed text-white/45">Mass, decoupling and isolation detailing to keep cinema sound inside — and the rest of the world outside.</p>
+          </div>
+          <div class="border-t border-white/10 pt-6" data-reveal data-delay="60">
+            <span class="font-display text-3xl text-gold/60">05</span>
+            <h3 class="mt-3 font-display text-2xl tracking-wide text-white">Room Correction</h3>
+            <p class="mt-2 text-xs leading-relaxed text-white/45">Digital calibration layered on top of physical treatment for a final response tuned to reference curves.</p>
+          </div>
+          <div class="border-t border-white/10 pt-6" data-reveal data-delay="120">
+            <span class="font-display text-3xl text-gold/60">06</span>
+            <h3 class="mt-3 font-display text-2xl tracking-wide text-white">Mechanical Quiet</h3>
+            <p class="mt-2 text-xs leading-relaxed text-white/45">Isolated HVAC, projector and equipment noise so the quietest moments in a film stay truly quiet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPACES -->
+    <section class="section relative overflow-hidden border-y border-white/8 bg-[#072D59]">
+      <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+        <div data-reveal="left">
+          <p class="eyebrow">Beyond the home</p>
+          <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl">SPACES THAT NEED TO <span class="text-gradient-gold">SOUND RIGHT</span></h2>
+          <p class="mt-6 text-sm leading-relaxed text-white/55">
+            We bring the same measurement-led approach to commercial and public spaces — where clarity, intelligibility and consistency across every seat are non-negotiable.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="flex items-start justify-between gap-6 border-b border-white/8 pb-4">
+              <div><h3 class="font-display text-xl text-white">Auditoriums &amp; theatres</h3><p class="mt-1 text-xs text-white/40">Speech intelligibility and even musical coverage.</p></div>
+              <span class="font-display text-lg text-gold/50">01</span>
+            </div>
+            <div class="flex items-start justify-between gap-6 border-b border-white/8 pb-4">
+              <div><h3 class="font-display text-xl text-white">Boardrooms &amp; conference</h3><p class="mt-1 text-xs text-white/40">Clear conferencing without slap echo or dead zones.</p></div>
+              <span class="font-display text-lg text-gold/50">02</span>
+            </div>
+            <div class="flex items-start justify-between gap-6 border-b border-white/8 pb-4">
+              <div><h3 class="font-display text-xl text-white">Commercial multiplexes</h3><p class="mt-1 text-xs text-white/40">Reference presentation from front row to back.</p></div>
+              <span class="font-display text-lg text-gold/50">03</span>
+            </div>
+            <div class="flex items-start justify-between gap-6">
+              <div><h3 class="font-display text-xl text-white">Studios &amp; content rooms</h3><p class="mt-1 text-xs text-white/40">Accurate monitoring you can genuinely trust.</p></div>
+              <span class="font-display text-lg text-gold/50">04</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative" data-reveal="right">
+          <img src="assets/img/project6.jpg" alt="Commercial screening lounge with acoustic curtains" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+          <div class="absolute -bottom-6 left-6 border border-gold/30 bg-[#072D59]/95 px-6 py-4 backdrop-blur">
+            <p class="font-display text-2xl text-goldlight">EVERY SEAT. THE BEST SEAT.</p>
+            <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">Our acoustic promise</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+        <div data-reveal>
+          <p class="eyebrow">Acoustic FAQs</p>
+          <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl">SOUND <span class="text-gradient-gold">QUESTIONS</span></h2>
+          <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/45">If your room sounds “boomy”, “echoey” or “thin”, it is almost certainly a treatment problem — not an equipment problem. We can help.</p>
+          <a href="contact.html" class="btn btn-ghost mt-7">Book an Assessment</a>
+        </div>
+        <div data-accordion data-reveal="right">
+          <div class="acc-item">
+            <button class="acc-trigger" aria-expanded="true">Do acoustic panels make a room feel dead?<span class="acc-icon"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel"><div class="acc-inner">Not when they are designed properly. Over-absorption is a common mistake. We balance absorption with diffusion and bass control so the room stays alive and natural while removing the problems — echo, harshness and boom.</div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-trigger" aria-expanded="false">Can I soundproof an existing room?<span class="acc-icon"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel"><div class="acc-inner">Yes, within limits. Full isolation usually requires adding mass and decoupling to walls, ceiling and floor, which reduces room dimensions. We assess the existing construction and recommend the most effective intervention for the space available.</div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-trigger" aria-expanded="false">What is MAPS and why does it matter?<span class="acc-icon"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel"><div class="acc-inner">MAPS is our Modular Acoustic Panel System. It lets us create almost any visual pattern while keeping the services behind the panels accessible. That means beautiful rooms that can still be maintained, upgraded and serviced without demolition.</div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-trigger" aria-expanded="false">How do you measure success?<span class="acc-icon"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <div class="acc-panel"><div class="acc-inner">We measure reverberation time, frequency response, seat-to-seat consistency and background noise before and after treatment. You receive a simple report showing what changed and why — no hand-waving.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative overflow-hidden border-t border-white/8">
+      <img src="assets/img/project3.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20" loading="lazy" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/30"></div>
+      <div class="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="max-w-2xl" data-reveal>
+          <p class="eyebrow">Listen better</p>
+          <h2 class="mt-5 font-display text-5xl leading-[0.9] text-white sm:text-6xl">HEAR WHAT YOUR ROOM HAS BEEN <span class="text-gradient-gold">HIDING</span></h2>
+          <p class="mt-5 max-w-lg text-sm leading-relaxed text-white/55">Book an acoustic assessment and receive a clear, prioritised plan — whether you need one panel or a full build.</p>
+          <a href="contact.html" class="btn btn-gold mt-8">Request an Assessment</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Cinema Seating, Audio, Projection & Automation | PK Entertainment</title>
+  <meta name="description" content="Curated cinema seating, immersive audio, 4K laser projection, acoustic panels and smart controls from PK Entertainment. Every purchase includes expert consultation." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { ink: "#041B36", coal: "#072D59", panel: "#072D59", gold: "#FD5E88", goldlight: "#FF8EAD", cream: "#EAF8FF" },
+        fontFamily: { sans: ["Outfit", "sans-serif"], display: ['"Bebas Neue"', "sans-serif"], serif: ['"Cormorant Garamond"', "serif"] },
+      } },
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body data-page="shop" class="bg-ink text-cream font-sans antialiased">
+
+  <header id="site-header" class="site-header"></header>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero !min-h-[52vh]">
+      <img class="bg" src="assets/img/project2.jpg" alt="Luxury cinema seating and equipment" />
+      <div class="absolute inset-0 page-hero-shade"></div>
+      <div class="noise absolute inset-0"></div>
+      <div class="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8">
+        <p class="crumbs" data-reveal><a href="index.html">Home</a> &nbsp;/&nbsp; <span>Shop</span></p>
+        <p class="eyebrow mt-6" data-reveal data-delay="60">Curated for the cinema</p>
+        <h1 class="mt-4 text-white" data-reveal data-delay="120">THE <span class="text-gradient-gold">COLLECTION</span></h1>
+        <p class="mt-5 max-w-xl text-sm leading-relaxed text-white/55" data-reveal data-delay="180">
+          Seating, audio, projection, acoustics and control — selected for performance, not for shelf space. Every product comes with installation and calibration support from our team.
+        </p>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <div class="border-b border-white/8 bg-[#072D59]">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-px px-6 lg:grid-cols-4 lg:px-8">
+        <div class="flex items-center gap-3 py-5">
+          <svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
+          <span class="text-[10px] uppercase tracking-[0.18em] text-white/45">Doorstep inspection &amp; support</span>
+        </div>
+        <div class="flex items-center gap-3 py-5">
+          <svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
+          <span class="text-[10px] uppercase tracking-[0.18em] text-white/45">Quality &amp; durability assurance</span>
+        </div>
+        <div class="flex items-center gap-3 py-5">
+          <svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
+          <span class="text-[10px] uppercase tracking-[0.18em] text-white/45">Audio calibration &amp; wiring</span>
+        </div>
+        <div class="flex items-center gap-3 py-5">
+          <svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
+          <span class="text-[10px] uppercase tracking-[0.18em] text-white/45">Do's &amp; Don'ts customer guidance</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <section class="section">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="flex flex-col justify-between gap-7 md:flex-row md:items-end" data-reveal>
+          <div>
+            <p class="eyebrow">Shop the studio</p>
+            <h2 class="mt-4 font-display text-4xl leading-[0.95] text-white sm:text-5xl">PIECES WE <span class="text-gradient-gold">STAND BEHIND</span></h2>
+            <p class="mt-4 max-w-xl text-sm leading-relaxed text-white/45">Prices shown are indicative starting points and exclude installation. Enquire for a project-specific quote.</p>
+          </div>
+          <div class="flex flex-wrap gap-2" data-filter-group="#shop-grid">
+            <button class="filter-btn is-active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="seating">Seating</button>
+            <button class="filter-btn" data-filter="audio">Audio</button>
+            <button class="filter-btn" data-filter="projection">Projection</button>
+            <button class="filter-btn" data-filter="acoustics">Acoustics</button>
+            <button class="filter-btn" data-filter="control">Control</button>
+            <button class="filter-btn" data-filter="screens">Screens</button>
+          </div>
+        </div>
+
+        <div id="shop-grid" class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+          <!-- 1 -->
+          <article class="product-card" data-category="seating" data-reveal>
+            <div class="product-media">
+              <span class="product-tag">Bestseller</span>
+              <img src="assets/img/product1.jpg" alt="Milano motorised recliner in red and black leather" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Seating</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Milano Motorised Recliner</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/40">Italian-inspired leather, powered recline, USB charging and cup holders. Built for the front row.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹1,29,000 <span class="text-sm text-white/30">/ seat</span></p>
+                <a href="contact.html?package=seating" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="product-card" data-category="seating" data-reveal data-delay="60">
+            <div class="product-media">
+              <span class="product-tag">New</span>
+              <img src="assets/img/product2.jpg" alt="Verona cream leather cinema loveseat" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Seating</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Verona Leather Loveseat</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/40">A two-seat lounge with diamond quilting, powered footrests and a low-profile console for shared viewing.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹2,45,000</p>
+                <a href="contact.html?package=seating" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="product-card" data-category="seating" data-reveal data-delay="120">
+            <div class="product-media">
+              <img src="assets/img/product3.jpg" alt="Como modular green leather lounge with chaise" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Seating</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Como Modular Lounge</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/40">A deep-seated modular sofa for lounge-style cinemas, finished in soft green leather with a chaise.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹3,10,000</p>
+                <a href="contact.html?package=seating" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="product-card" data-category="audio" data-reveal>
+            <div class="product-media">
+              <span class="product-tag">THX Certified</span>
+              <img src="assets/img/speaker-klipsch.jpg" alt="Klipsch THX-certified home theater speaker" loading="lazy" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Audio</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Klipsch THX Speaker System</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/40">Reference THX Ultra2 certified theater sound with horn-loaded drivers, effortless cinema volume and dynamic realism.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹4,85,000 <span class="text-sm text-white/30">/ set</span></p>
+                <a href="contact.html?package=audio" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="product-card" data-category="projection" data-reveal data-delay="60">
+            <div class="product-media">
+              <span class="product-tag">4K / 3D Laser</span>
+              <img src="assets/img/projector-sony.png" alt="Sony 4K HDR home theater projector" loading="lazy" class="w-full h-full object-contain p-4 bg-coal" />
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Projection</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Sony Native 4K Laser Projector</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/40">SXRD panel technology with true 4K HDR, 3D support, deep blacks and laser phosphor illumination. Professional calibration included.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹6,50,000</p>
+                <a href="contact.html?package=projection" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="product-card" data-category="acoustics" data-reveal data-delay="120">
+            <div class="product-media product-media--graphic">
+              <span class="product-tag">MAPS</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Acoustics</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Signature Acoustic Panel</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/40">Fabric-wrapped modular absorption panel, available in custom sizes, colours and patterns. Installed and tuned.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹8,500 <span class="text-sm text-white/30">/ panel</span></p>
+                <a href="contact.html?package=acoustics" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="product-card" data-category="acoustics" data-reveal>
+            <div class="product-media product-media--graphic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="2.5"/></svg>
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Acoustics</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Starlight Ceiling Kit</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/40">Fibre-optic star ceiling with twinkle module, shooting-star option and remote scene control. Professionally mapped.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹74,000</p>
+                <a href="contact.html?package=ceiling" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="product-card" data-category="control" data-reveal data-delay="60">
+            <div class="product-media product-media--graphic">
+              <span class="product-tag">Smart</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h4"/></svg>
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Control</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Smart Cinema Controller</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/40">One-touch scenes for lights, screen, projector, audio and climate. App, voice and wall-panel control.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹42,000</p>
+                <a href="contact.html?package=control" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9 -->
+          <article class="product-card" data-category="audio" data-reveal data-delay="120">
+            <div class="product-media product-media--graphic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="7" cy="10" r="2"/><path d="M12 9h7M12 12h7M12 15h4"/></svg>
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Audio</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Cinema-Grade AVR</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/40">9.4-channel AV receiver with Dolby Atmos, Dirac room correction and full smart-home integration.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹1,95,000</p>
+                <a href="contact.html?package=audio" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10 - Screen: ALR -->
+          <article class="product-card" data-category="screens" data-reveal>
+            <div class="product-media">
+              <span class="product-tag">ALR</span>
+              <img src="assets/img/screen-alr.jpg" alt="Ambient Light Rejecting ALR screen" loading="lazy" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Screens</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">ALR Screen (Ambient Light Rejecting)</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/45">Advanced optical layer rejects up to 90% ambient light for deep blacks in well-lit rooms. 4K &amp; 3D compatible. Custom sizes available (from ~8" custom units to 135"+; dimensions verified per room).</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹1,85,000 <span class="text-sm text-white/30">/ 115"</span></p>
+                <a href="contact.html?package=screens" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 11 - Screen: Acoustic Transparent -->
+          <article class="product-card" data-category="screens" data-reveal data-delay="60">
+            <div class="product-media">
+              <span class="product-tag">Acoustically Transparent</span>
+              <img src="assets/img/screen-acoustic.jpg" alt="Acoustically transparent woven cinema screen" loading="lazy" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Screens</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Acoustically Transparent Screen</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/45">Micro-perforated / woven weave allows front speakers to sit directly behind the image with near-zero acoustic loss. 4K &amp; 3D compatible for the true cinema experience.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹2,15,000 <span class="text-sm text-white/30">/ 120"</span></p>
+                <a href="contact.html?package=screens" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 12 - Screen: PVC White -->
+          <article class="product-card" data-category="screens" data-reveal data-delay="120">
+            <div class="product-media">
+              <span class="product-tag">PVC White</span>
+              <img src="assets/img/screen-pvc.jpg" alt="Basic economy white PVC projection screen" loading="lazy" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-6">
+              <p class="text-[9px] uppercase tracking-[0.22em] text-gold">Screens</p>
+              <h3 class="mt-2 font-display text-2xl tracking-wide text-white">Basic Economy White PVC Screen</h3>
+              <p class="mt-2 text-xs leading-relaxed text-white/45">Tensioned matte white PVC screen delivering high durability, uniform 1.1-1.3 gain, and full 4K / 3D content compatibility. Affordable excellence for dedicated dark theaters.</p>
+              <div class="mt-5 flex items-end justify-between border-t border-white/8 pt-4">
+                <p class="font-display text-2xl text-goldlight">₹95,000 <span class="text-sm text-white/30">/ 120"</span></p>
+                <a href="contact.html?package=screens" class="text-[9px] uppercase tracking-[0.2em] text-gold hover:text-goldlight">Enquire →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="mt-8 text-[11px] leading-relaxed text-white/30">
+          All prices are indicative, exclusive of GST, shipping and installation. Product availability and final specification are confirmed at consultation. We do not operate an online checkout — every order is personally handled by our team.
+        </p>
+      </div>
+    </section>
+
+    <!-- CUSTOM BANNER -->
+    <section class="section border-y border-white/8 bg-[#072D59]">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
+        <div data-reveal="left">
+          <p class="eyebrow">Made for you</p>
+          <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl">DON'T SEE IT? <span class="text-gradient-gold">WE'LL MAKE IT.</span></h2>
+          <p class="mt-5 text-sm leading-relaxed text-white/50">Custom seating sizes, bespoke fabric, one-off acoustic panels and complete equipment packages are all part of the service. Tell us the room and the look — we will engineer the rest.</p>
+          <a href="contact.html" class="btn btn-gold mt-8">Request a Custom Quote</a>
+        </div>
+        <div class="grid grid-cols-2 gap-4" data-reveal="right">
+          <img src="assets/img/product2.jpg" alt="Custom cream cinema seating" class="aspect-square w-full object-cover" loading="lazy" />
+          <img src="assets/img/project2.jpg" alt="Red cinema interior with custom seating" class="mt-8 aspect-square w-full object-cover" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative overflow-hidden">
+      <img src="assets/img/project4.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20" loading="lazy" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/30"></div>
+      <div class="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div class="max-w-2xl" data-reveal>
+          <p class="eyebrow">Talk to a human</p>
+          <h2 class="mt-5 font-display text-5xl leading-[0.9] text-white sm:text-6xl">NOT SURE WHAT <span class="text-gradient-gold">FITS?</span></h2>
+          <p class="mt-5 max-w-lg text-sm leading-relaxed text-white/55">Send us your room dimensions and budget. We will shortlist the right pieces — and tell you honestly what you don't need.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="contact.html" class="btn btn-gold">Get Product Advice</a>
+            <a href="tel:+919810012345" class="btn btn-ghost">+91 98100 12345</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
