@@ -11,19 +11,16 @@
   const NAV = [
     { key: "home", label: "Home", href: "index.html" },
     { key: "theater", label: "Theater", href: "theater.html" },
-    { key: "acoustics", label: "Acoustic Solution", href: "acoustics.html" },
     { key: "about", label: "About Us", href: "about.html" },
     { key: "contact", label: "Contact", href: "contact.html" },
   ];
 
-  const PHONE_1 = "+91 98100 12345";
-  const PHONE_1_LINK = "+919810012345";
-  const PHONE_2 = "+91 98100 67890";
-  const PHONE_2_LINK = "+919810067890";
+  const PHONE_1 = "+91 90001 35543";
+  const PHONE_1_LINK = "+919000135543";
   const EMAIL = "hello@pkentertainment.in";
   const ADDRESS =
-    "PK Entertainment, ATM No. 01–03, Suncity Success Tower, Sector 65, Gurugram, HR 122102";
-  const WA = "https://wa.me/919810012345";
+    "48-3-55/1, Day & Night Hospital Road, Near Rama Talkies, Srinagar, VISAKHAPATNAM -530016";
+  const WA = "https://wa.me/919000135543";
 
   /* ---------------- Icons ---------------- */
   const ICONS = {
@@ -49,9 +46,7 @@
 
   const socials = (extra = "") => `
     <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="${extra}">${ICONS.instagram}</a>
-    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="${extra}">${ICONS.facebook}</a>
-    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" class="${extra}">${ICONS.linkedin}</a>
-    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="${extra}">${ICONS.youtube}</a>`;
+    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="${extra}">${ICONS.facebook}</a>`;
 
   const logo = (size = "normal") => `
     <a href="index.html" class="flex items-center gap-3 group" aria-label="PK Entertainment home">
@@ -70,14 +65,14 @@
     headerMount.innerHTML = `
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-2 lg:px-6 lg:py-2">
         ${logo()}
-        <nav class="hidden items-center gap-7 xl:flex" aria-label="Primary">
+        <nav class="primary-nav hidden items-center gap-1 lg:flex" aria-label="Primary">
           ${NAV.map(
             (n) =>
               `<a href="${n.href}" class="nav-link ${n.key === pageKey ? "is-active" : ""}">${n.label}</a>`
           ).join("")}
         </nav>
         <div class="flex items-center gap-4">
-          <button id="menu-open" class="grid h-11 w-11 place-items-center border border-white/15 text-white/80 transition hover:border-[#FD5E88] hover:text-[#FD5E88] xl:hidden" aria-label="Open menu" aria-expanded="false">
+          <button id="menu-open" class="grid h-11 w-11 place-items-center border border-white/15 text-white/80 transition hover:border-[#FF8500] hover:text-[#FF8500] lg:hidden" aria-label="Open menu" aria-expanded="false">
             ${ICONS.menu}
           </button>
         </div>
@@ -93,7 +88,7 @@
   drawer.innerHTML = `
     <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
       ${logo()}
-      <button id="menu-close" class="grid h-11 w-11 place-items-center border border-white/15 text-white/80 hover:border-[#FD5E88] hover:text-[#FD5E88] transition" aria-label="Close menu">
+      <button id="menu-close" class="grid h-11 w-11 place-items-center border border-white/15 text-white/80 hover:border-[#FF8500] hover:text-[#FF8500] transition" aria-label="Close menu">
         ${ICONS.close}
       </button>
     </div>
@@ -109,7 +104,7 @@
         <a href="${WA}" target="_blank" rel="noopener" class="btn btn-gold w-full">Book a Consultation ${ICONS.arrow}</a>
       </div>
       <div class="mt-10 flex items-center justify-between border-t border-white/10 pt-6">
-        <div class="flex items-center gap-3 text-white/50">${socials("hover:text-[#FD5E88] transition")}</div>
+        <div class="flex items-center gap-3 text-white/50">${socials("hover:text-[#FF8500] transition")}</div>
       </div>
     </div>
   `;
@@ -140,68 +135,43 @@
   const footerMount = $("#site-footer");
   if (footerMount) {
     footerMount.innerHTML = `
-      <footer class="relative overflow-hidden border-t border-white/10 bg-[#0a1024]">
-        <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-[#FD5E88]/5 blur-3xl"></div>
+      <footer class="relative overflow-hidden border-t border-white/10 bg-[#21232E]">
+        <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-[#105BFF]/5 blur-3xl"></div>
         <div class="relative mx-auto max-w-7xl px-6 pt-20 pb-10">
-          <div class="grid gap-14 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+          <div class="grid gap-14 lg:grid-cols-[1.4fr_1fr_1.2fr]">
             <div>
               ${logo()}
               <p class="mt-6 max-w-sm text-sm leading-relaxed text-white/45">
                 Acoustically tuned private cinemas, smart homes and immersive spaces — designed, engineered and calibrated by a team that lives for the movies.
               </p>
               <div class="mt-7 flex items-center gap-3">${socials("social-btn")}</div>
-              <div class="mt-8 flex items-center gap-3">
-                <span class="pill !text-[9px]"><span class="h-1.5 w-1.5 rounded-full bg-[#46C8F5]"></span> Booking 2026 projects</span>
-              </div>
             </div>
 
-            <div>
-              <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#FD5E88]">Company</h4>
+            <div class="lg:-mr-8">
+              <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#FF8500]">Company</h4>
               <ul class="space-y-3">
                 ${NAV.map((n) => `<li><a class="footer-link" href="${n.href}">${n.label}</a></li>`).join("")}
               </ul>
             </div>
 
             <div>
-              <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#FD5E88]">Other Links</h4>
-              <ul class="space-y-3">
-                <li><a class="footer-link" href="privacy-policy.html">Privacy Policy</a></li>
-                <li><a class="footer-link" href="shipping-delivery.html">Shipping &amp; Delivery</a></li>
-                <li><a class="footer-link" href="refund-policy.html">Refund Policy</a></li>
-                <li><a class="footer-link" href="terms-conditions.html">Terms &amp; Conditions</a></li>
-                <li><a class="footer-link" href="contact.html">Contact Us</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#FD5E88]">Contact</h4>
+              <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#FF8500]">Contact</h4>
               <ul class="space-y-4 text-sm text-white/50">
                 <li class="flex gap-3">
-                  <span class="mt-0.5 text-[#FD5E88]">${ICONS.phone.replace('<svg','<svg class="w-4 h-4"')}</span>
+                  <span class="mt-0.5 text-[#FF8500]">${ICONS.phone.replace('<svg','<svg class="w-4 h-4"')}</span>
                   <span>
-                    <a href="tel:${PHONE_1_LINK}" class="block hover:text-[#FF8EAD]">${PHONE_1}</a>
-                    <a href="tel:${PHONE_2_LINK}" class="block hover:text-[#FF8EAD]">${PHONE_2}</a>
+                    <a href="tel:${PHONE_1_LINK}" class="block hover:text-[#FF8500]">${PHONE_1}</a>
                   </span>
                 </li>
                 <li class="flex gap-3">
-                  <span class="mt-0.5 text-[#FD5E88]">${ICONS.mail.replace('<svg','<svg class="w-4 h-4"')}</span>
-                  <a href="mailto:${EMAIL}" class="hover:text-[#FF8EAD]">${EMAIL}</a>
+                  <span class="mt-0.5 text-[#FF8500]">${ICONS.mail.replace('<svg','<svg class="w-4 h-4"')}</span>
+                  <a href="mailto:${EMAIL}" class="hover:text-[#FF8500]">${EMAIL}</a>
                 </li>
                 <li class="flex gap-3">
-                  <span class="mt-0.5 shrink-0 text-[#FD5E88]">${ICONS.pin.replace('<svg','<svg class="w-4 h-4"')}</span>
-                  <span class="leading-relaxed">Suncity Success Tower,<br/>Sector 65, Gurugram,<br/>Haryana 122102</span>
+                  <span class="mt-0.5 shrink-0 text-[#FF8500]">${ICONS.pin.replace('<svg','<svg class="w-4 h-4"')}</span>
+                  <span class="leading-relaxed">48-3-55/1, Day &amp; Night Hospital Road,<br/>Near Rama Talkies, Srinagar,<br/>VISAKHAPATNAM -530016</span>
                 </li>
               </ul>
-              <form class="mt-6" data-newsletter>
-                <label class="field-label" for="footer-email">Join the guest list</label>
-                <div class="flex">
-                  <input id="footer-email" type="email" required class="field !border-r-0 !py-3" placeholder="Your email address" />
-                  <button type="submit" class="grid w-12 shrink-0 place-items-center bg-[#FD5E88] text-[#041B36] transition hover:bg-[#FF8EAD]" aria-label="Subscribe">
-                    ${ICONS.arrow}
-                  </button>
-                </div>
-                <p class="form-note mt-2">Project drops, cinema tips. No spam.</p>
-              </form>
             </div>
           </div>
 
@@ -209,8 +179,8 @@
             <p>© ${new Date().getFullYear()} PK Entertainment. All rights reserved.</p>
             <p class="tracking-[0.18em] uppercase">Crafted for the love of cinema</p>
             <div class="flex items-center gap-5">
-              <a href="privacy-policy.html" class="hover:text-[#FD5E88]">Privacy</a>
-              <a href="terms-conditions.html" class="hover:text-[#FD5E88]">Terms</a>
+              <a href="privacy-policy.html" class="hover:text-[#FF8500]">Privacy</a>
+              <a href="terms-conditions.html" class="hover:text-[#FF8500]">Terms</a>
             </div>
           </div>
         </div>
@@ -248,7 +218,7 @@
     if (!header) return;
     const sampleY = Math.min(header.offsetHeight || 72, 72);
     const sampleX = Math.min(window.innerWidth / 2, window.innerWidth - 1);
-    const fallback = "rgba(11, 19, 41, 0.94)";
+    const fallback = "rgba(33, 35, 46, 0.92)";
     let nextColor = fallback;
 
     document.elementsFromPoint(sampleX, sampleY).some((el) => {
@@ -462,10 +432,12 @@
         }
       });
     });
-    const first = items.find((i) => i.classList.contains("is-open")) || items[0];
-    if (first) {
-      first.classList.add("is-open");
-      $(".acc-panel", first).style.maxHeight = $(".acc-panel", first).scrollHeight + "px";
+    if (!acc.hasAttribute("data-start-closed")) {
+      const first = items.find((i) => i.classList.contains("is-open")) || items[0];
+      if (first) {
+        first.classList.add("is-open");
+        $(".acc-panel", first).style.maxHeight = $(".acc-panel", first).scrollHeight + "px";
+      }
     }
   });
 
@@ -503,7 +475,6 @@
         audio: "Products / Furniture",
         projection: "Products / Furniture",
         ceiling: "Products / Furniture",
-        acoustics: "Acoustic Solution",
       };
       const wanted = aliases[pkg.toLowerCase()] || pkg;
       const opt = Array.from(select.options).find((o) =>
@@ -537,19 +508,6 @@
         btn.innerHTML = original;
         window.pkToast("Thank you! Our team will call you within 24 hours.");
       }, 1100);
-    });
-  });
-
-  $$("form[data-newsletter]").forEach((form) => {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const input = $("input", form);
-      if (!input.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
-        window.pkToast("Please enter a valid email address.");
-        return;
-      }
-      form.reset();
-      window.pkToast("You're on the list. Welcome to PK Entertainment.");
     });
   });
 

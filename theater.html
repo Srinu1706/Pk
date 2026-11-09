@@ -13,57 +13,35 @@
   <script>
     tailwind.config = {
       theme: { extend: {
-        colors: { ink: "#041B36", coal: "#072D59", panel: "#072D59", gold: "#FD5E88", goldlight: "#FF8EAD", cream: "#EAF8FF" },
+        colors: { ink: "#21232E", coal: "#252731", panel: "#292C38", gold: "#FF8500", goldlight: "#FF8500", cream: "#FFFFFF" },
         fontFamily: { sans: ["Outfit", "sans-serif"], display: ['"Bebas Neue"', "sans-serif"], serif: ['"Cormorant Garamond"', "serif"] },
       } },
     };
   </script>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/theater-visualizer.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+      }
+    }
+  </script>
 </head>
 <body data-page="theater" class="bg-ink text-cream font-sans antialiased">
 
   <header id="site-header" class="site-header"></header>
 
   <main>
-    <!-- INTRO -->
-    <section class="section theater-intro">
-      <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
-        <div data-reveal="left">
-          <p class="eyebrow">The big picture</p>
-          <h2 class="mt-5 font-display text-[1.25rem] leading-[0.95] text-white sm:text-[1.25rem]">
-            YOUR ROOM HAS A <span class="text-gradient-gold">BEST VERSION.</span> WE FIND IT.
-          </h2>
-          <p class="mt-6 text-sm leading-relaxed text-white/55">
-            Different areas have different requirements. Some closed rooms can be beautifully served by a large screen and refined home theater speakers; others need a high-end, reference-grade system to deliver the real experience. Our expertise lies in knowing which is which — and guiding you to the right answer.
-          </p>
-          <p class="mt-4 text-sm leading-relaxed text-white/45">
-            From compact 10×12 ft rooms to 20×30 ft private multiplexes, we plan each theater around seating position, sight lines, speaker geometry and the way sound behaves in your specific volume of space. Nothing is copied from a catalogue.
-          </p>
-
-          <div class="mt-9 grid grid-cols-2 gap-6 sm:grid-cols-3">
-            <div>
-              <p class="font-display text-4xl leading-none text-goldlight"><span data-count="250" data-suffix="+">250+</span></p>
-              <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">Theaters delivered</p>
-            </div>
-            <div>
-              <p class="font-display text-4xl leading-none text-goldlight"><span data-count="100" data-suffix="%">100%</span></p>
-              <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">Turnkey projects</p>
-            </div>
-            <div>
-              <p class="font-display text-4xl leading-none text-goldlight"><span data-count="40" data-suffix="+">40+</span></p>
-              <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">Cities served</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="relative" data-reveal="right">
-          <img src="assets/img/project5.jpg" alt="Home theater with black leather recliners and star ceiling" class="aspect-[4/3] w-full object-cover" loading="lazy" />
-        </div>
+    <section class="section theater-visualizer-section" aria-label="Interactive speaker configuration visualizer">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div id="theater-visualizer"></div>
       </div>
     </section>
 
     <!-- INCLUDED -->
-    <section id="included" class="section border-y border-white/8 bg-[#072D59]">
+    <section id="included" class="section border-y border-white/8 bg-[#292C38]">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-2xl" data-reveal>
           <p class="eyebrow">Scope of work</p>
@@ -128,82 +106,58 @@
       </div>
     </section>
 
-    <!-- TECH -->
-    <section class="section">
-      <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-20 lg:px-8">
-        <div class="relative order-2 lg:order-1" data-reveal="left">
-          <img src="assets/img/project4.jpg" alt="Luxury cinema with red recliners, bar and premium AV" class="aspect-[4/3] w-full object-cover" loading="lazy" />
-          <div class="absolute -bottom-6 right-6 hidden border border-gold/30 bg-[#072D59]/95 px-6 py-5 backdrop-blur sm:block">
-            <p class="text-[9px] uppercase tracking-[0.24em] text-white/40">Calibrated to</p>
-            <p class="mt-1 font-display text-3xl text-goldlight">REFERENCE LEVEL</p>
-          </div>
-        </div>
-
-        <div class="order-1 lg:order-2" data-reveal="right">
-          <p class="eyebrow">Technology, curated</p>
-          <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl">
-            ONLY WHAT YOUR ROOM <span class="text-gradient-gold">ACTUALLY NEEDS</span>
-          </h2>
-          <p class="mt-6 text-sm leading-relaxed text-white/55">
-            We are brand-agnostic. That means we specify equipment for performance and reliability in your space — not for the margin. Every system is demonstrated, tuned and documented before handover.
-          </p>
-          <ul class="mt-8 space-y-4">
-            <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>4K / 3D laser projection (Epson, Optoma, BenQ, Sony, LG, JVC, ViewSonic, Panasonic)</li>
-            <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>THX-certified audio with JBL, Klipsch, ELAC, Jamo, DALI, Sonodyne, Sonos &amp; TAGA Harmony</li>
-            <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>ALR (Ambient Light Rejecting), acoustically transparent, and economy white PVC screens</li>
-            <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>End-to-end add-ons: site inspection, speaker wiring, screen fitting, calibration &amp; AV support</li>
-            <li class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Doorstep service, durable engineering, structure design, and customer do's &amp; don'ts guidelines</li>
-          </ul>
-          <div class="mt-9 flex flex-wrap gap-2.5">
-            <span class="pill">Epson</span><span class="pill">Optoma</span><span class="pill">BenQ</span><span class="pill">Sony</span><span class="pill">LG</span><span class="pill">JVC</span><span class="pill">ViewSonic</span><span class="pill">Panasonic</span><span class="pill">JBL</span><span class="pill">Klipsch</span><span class="pill">ELAC</span><span class="pill">Jamo</span><span class="pill">DALI</span><span class="pill">Sonodyne</span><span class="pill">Sonos</span><span class="pill">TAGA Harmony</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- GALLERY -->
-    <section class="section">
+    <section class="section theater-gallery">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end" data-reveal>
           <div>
             <p class="eyebrow">Selected work</p>
-            <h2 class="mt-4 font-display text-4xl leading-[0.95] text-white sm:text-5xl">ROOMS WE'VE <span class="text-gradient-gold">BROUGHT TO LIFE</span></h2>
+            <h2 class="mt-4 font-display text-4xl leading-[0.95] text-white sm:text-5xl">ROOMS WE'VE <span class="text-white">BROUGHT TO LIFE</span></h2>
           </div>
           <a href="index.html#project-grid" class="text-[10px] uppercase tracking-[0.24em] text-gold hover:text-goldlight">View all projects →</a>
         </div>
         <div class="mt-10 grid gap-4 md:grid-cols-3">
-          <a class="project-card" data-lightbox="theater-gallery" data-title="The Emerald Room — Gurugram" data-src="assets/img/project1.jpg" data-reveal>
-            <img src="assets/img/project1.jpg" alt="Home theater with green recliners" loading="lazy" />
+          <a class="project-card" data-lightbox="theater-gallery" data-title="Private Cinema 01" data-src="assets/img/work1.jpeg" data-reveal>
+            <img src="assets/img/work1.jpeg" alt="Custom home theater room 1" loading="lazy" />
             <span class="project-plus"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span>
-            <div class="project-meta"><p class="font-display text-xl text-white">The Emerald Room</p></div>
           </a>
-          <a class="project-card" data-lightbox="theater-gallery" data-title="Crimson Club — Chandigarh" data-src="assets/img/project4.jpg" data-reveal data-delay="80">
-            <img src="assets/img/project4.jpg" alt="Cinema with red recliners and bar" loading="lazy" />
+          <a class="project-card" data-lightbox="theater-gallery" data-title="Private Cinema 02" data-src="assets/img/work2.jpeg" data-reveal data-delay="80">
+            <img src="assets/img/work2.jpeg" alt="Custom home theater room 2" loading="lazy" />
             <span class="project-plus"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span>
-            <div class="project-meta"><p class="font-display text-xl text-white">Crimson Club</p></div>
           </a>
-          <a class="project-card" data-lightbox="theater-gallery" data-title="Noir Suite — Gurugram" data-src="assets/img/project5.jpg" data-reveal data-delay="160">
-            <img src="assets/img/project5.jpg" alt="Black luxury cinema suite" loading="lazy" />
+          <a class="project-card" data-lightbox="theater-gallery" data-title="Private Cinema 03" data-src="assets/img/work3.jpeg" data-reveal data-delay="160">
+            <img src="assets/img/work3.jpeg" alt="Custom home theater room 3" loading="lazy" />
             <span class="project-plus"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span>
-            <div class="project-meta"><p class="font-display text-xl text-white">Noir Suite</p></div>
+          </a>
+          <a class="project-card" data-lightbox="theater-gallery" data-title="Private Cinema 04" data-src="assets/img/work4.jpeg" data-reveal>
+            <img src="assets/img/work4.jpeg" alt="Custom home theater room 4" loading="lazy" />
+            <span class="project-plus"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span>
+          </a>
+          <a class="project-card" data-lightbox="theater-gallery" data-title="Private Cinema 05" data-src="assets/img/work5.jpeg" data-reveal data-delay="80">
+            <img src="assets/img/work5.jpeg" alt="Custom home theater room 5" loading="lazy" />
+            <span class="project-plus"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span>
+          </a>
+          <a class="project-card" data-lightbox="theater-gallery" data-title="Private Cinema 06" data-src="assets/img/work6.jpeg" data-reveal data-delay="160">
+            <img src="assets/img/work6.jpeg" alt="Custom home theater room 6" loading="lazy" />
+            <span class="project-plus"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span>
           </a>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section border-t border-white/8 bg-[#072D59]">
+    <section class="section border-t border-white/8 bg-[#292C38]">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="max-w-2xl" data-reveal>
           <p class="eyebrow">Good questions</p>
           <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl">BEFORE YOU <span class="text-gradient-gold">PRESS PLAY</span></h2>
-          <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/45">Still curious? Call us or send a message — we are happy to talk through your room, even if you are months away from starting.</p>
+          <p class="mt-5 text-sm leading-relaxed text-white/45 sm:whitespace-nowrap">Still curious? Call us or send a message — we are happy to talk through your room, even if you are months away from starting.</p>
           <a href="contact.html" class="btn btn-ghost mt-7">Ask a Question</a>
         </div>
 
-        <div class="theater-faq-grid mt-12" data-accordion data-reveal="right">
+        <div class="theater-faq-grid mt-12" data-accordion data-start-closed data-reveal="right">
           <div class="acc-item">
-            <button class="acc-trigger" aria-expanded="true">How long does a home theater project take?<span class="acc-icon"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span></button>
+            <button class="acc-trigger" aria-expanded="false">How long does a home theater project take?<span class="acc-icon"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 5v14M5 12h14"/></svg></span></button>
             <div class="acc-panel"><div class="acc-inner">A typical private cinema takes 8–14 weeks from design sign-off to handover, depending on room readiness, civil work and equipment lead times. We share a week-by-week schedule before starting and update you at every milestone.</div></div>
           </div>
           <div class="acc-item">
@@ -234,5 +188,6 @@
 
   <div id="site-footer"></div>
   <script src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/theater-visualizer.js"></script>
 </body>
 </html>

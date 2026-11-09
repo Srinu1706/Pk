@@ -13,7 +13,7 @@
   <script>
     tailwind.config = {
       theme: { extend: {
-        colors: { ink: "#041B36", coal: "#072D59", panel: "#072D59", gold: "#FD5E88", goldlight: "#FF8EAD", cream: "#EAF8FF" },
+        colors: { ink: "#21232E", coal: "#252731", panel: "#292C38", gold: "#FF8500", goldlight: "#FF8500", cream: "#FFFFFF" },
         fontFamily: { sans: ["Outfit", "sans-serif"], display: ['"Bebas Neue"', "sans-serif"], serif: ['"Cormorant Garamond"', "serif"] },
       } },
     };
@@ -26,76 +26,11 @@
   <header id="site-header" class="site-header"></header>
 
   <main>
-    <!-- HERO -->
-    <section class="page-hero">
-      <img class="bg" src="assets/img/project4.jpg" alt="PK Entertainment luxury cinema project" />
-      <div class="absolute inset-0 page-hero-shade"></div>
-      <div class="noise absolute inset-0"></div>
-      <div class="relative z-10 mx-auto w-full max-w-7xl px-6 lg:px-8">
-        <p class="crumbs" data-reveal><a href="index.html">Home</a> &nbsp;/&nbsp; <span>About Us</span></p>
-        <p class="eyebrow mt-6" data-reveal data-delay="60">Since 2018</p>
-        <h1 class="mt-4 text-white" data-reveal data-delay="120">THE PEOPLE BEHIND <span class="text-gradient-gold">THE PICTURE</span></h1>
-        <p class="mt-5 max-w-xl text-sm leading-relaxed text-white/55" data-reveal data-delay="180">
-          Designers, acousticians, engineers and cinephiles. One team, obsessed with the moment the lights go down.
-        </p>
-      </div>
-    </section>
-
-    <!-- BRANDS -->
-    <section class="border-b border-white/8 bg-[#080d1c] py-12 sm:py-16">
-      <div class="mx-auto mb-9 flex max-w-7xl flex-col gap-4 px-6 sm:flex-row sm:items-end sm:justify-between lg:px-8" data-reveal>
-        <div>
-          <p class="eyebrow">Our Brands</p>
-          <h2 class="mt-4 font-display text-3xl leading-none text-white sm:text-4xl">BRANDS WE <span class="text-gradient-gold">STAND BEHIND</span></h2>
-        </div>
-        <p class="max-w-sm text-xs leading-relaxed text-white/40 sm:text-right">4K/3D laser projection and THX-certified sound from the names that define modern cinema.</p>
-      </div>
-
-      <div class="marquee">
-        <div class="marquee__track">
-          <span class="brand-card"><img src="assets/img/brands/epson.svg" alt="Epson" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/optoma.png" alt="Optoma" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/benq.svg" alt="BenQ" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/sony.svg" alt="Sony" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/lg.svg" alt="LG" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/jvc.svg" alt="JVC" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/viewsonic.svg" alt="ViewSonic" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/panasonic.svg" alt="Panasonic" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/jbl.svg" alt="JBL" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/klipsch.png" alt="Klipsch" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/elac.svg" alt="ELAC" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/jamo.svg" alt="Jamo" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/thx.svg" alt="THX Certified" draggable="false" /></span>
-        </div>
-        <div class="marquee__track" aria-hidden="true">
-          <span class="brand-card"><img src="assets/img/brands/epson.svg" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/optoma.png" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/benq.svg" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/sony.svg" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/lg.svg" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/jvc.svg" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/viewsonic.svg" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/panasonic.svg" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/jbl.svg" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/klipsch.png" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/elac.svg" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/jamo.svg" alt="" draggable="false" /></span>
-          <span class="brand-card"><img src="assets/img/brands/thx.svg" alt="" draggable="false" /></span>
-        </div>
-      </div>
-    </section>
-
     <!-- STORY -->
-    <section class="section">
+    <section class="section about-story">
       <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
         <div class="relative" data-reveal="left">
-          <div class="gold-frame">
-            <img src="assets/img/project1.jpg" alt="PK Entertainment home theater project" class="relative z-10 aspect-[4/3] w-full object-cover" loading="lazy" />
-          </div>
-          <div class="absolute -bottom-8 -right-4 z-20 hidden border border-gold/30 bg-[#072D59]/95 px-6 py-5 backdrop-blur sm:block">
-            <p class="font-display text-4xl leading-none text-gradient-gold">250+</p>
-            <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">Cinemas delivered</p>
-          </div>
+          <img src="assets/img/mini theater 1.jpg" alt="Mini theater designed by PK Entertainment" class="aspect-[4/3] w-full object-cover" loading="lazy" />
         </div>
 
         <div data-reveal="right">
@@ -119,7 +54,7 @@
               <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">Years of craft</p>
             </div>
             <div class="border border-white/10 bg-white/[0.02] p-5">
-              <p class="font-display text-3xl text-goldlight"><span data-count="40" data-suffix="+">40+</span></p>
+              <p class="font-display text-3xl text-goldlight"><span data-count="10" data-suffix="+">10+</span></p>
               <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">Cities served</p>
             </div>
           </div>
@@ -128,7 +63,7 @@
     </section>
 
     <!-- VALUES -->
-    <section class="section border-y border-white/8 bg-[#072D59]">
+    <section class="section border-y border-white/8 bg-[#292C38]">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center" data-reveal>
           <p class="eyebrow eyebrow--center justify-center">How PK is different from others</p>
@@ -167,7 +102,7 @@
     </section>
 
     <!-- WHY PK -->
-    <section class="section border-y border-white/8 bg-[#072D59]">
+    <section class="section border-y border-white/8 bg-[#292C38]">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center" data-reveal>
           <p class="eyebrow eyebrow--center justify-center">Why choose us</p>
@@ -211,7 +146,7 @@
         <div data-reveal>
           <p class="eyebrow">Milestones</p>
           <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl">A DECADE IN THE <span class="text-gradient-gold">MAKING</span></h2>
-          <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/45">From a two-person studio to a full turnkey cinema practice — one project at a time.</p>
+          <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/45">We specialize in designing and building mini theaters, transforming rooms of all sizes into immersive cinematic experiences.</p>
           <img src="assets/img/project6.jpg" alt="PK Entertainment cinema project" class="mt-9 hidden aspect-[4/3] w-full object-cover lg:block" loading="lazy" />
         </div>
 
@@ -239,21 +174,21 @@
           <div class="timeline-item">
             <p class="value-num">2026</p>
             <h3 class="mt-2 font-display text-2xl text-white">The next chapter</h3>
-            <p class="mt-2 text-sm leading-relaxed text-white/45">Now serving 40+ cities, with a renewed focus on sustainable, serviceable and genuinely personal cinema design.</p>
+            <p class="mt-2 text-sm leading-relaxed text-white/45">Now serving 10+ cities, with a renewed focus on sustainable, serviceable and genuinely personal cinema design.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- STATS BAND -->
-    <section class="stat-strip bg-[#072D59]">
+    <section class="stat-strip bg-[#292C38]">
       <div class="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-6 py-14 lg:grid-cols-4 lg:px-8">
         <div class="text-center" data-reveal>
           <p class="stat-num"><span data-count="250" data-suffix="+">250+</span></p>
           <p class="mt-2 text-[9px] uppercase tracking-[0.24em] text-white/40">Theaters delivered</p>
         </div>
         <div class="text-center" data-reveal data-delay="60">
-          <p class="stat-num"><span data-count="40" data-suffix="+">40+</span></p>
+          <p class="stat-num"><span data-count="10" data-suffix="+">10+</span></p>
           <p class="mt-2 text-[9px] uppercase tracking-[0.24em] text-white/40">Cities served</p>
         </div>
         <div class="text-center" data-reveal data-delay="120">
@@ -267,19 +202,6 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="relative overflow-hidden">
-      <img src="assets/img/project1.jpg" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20" loading="lazy" />
-      <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/90 to-ink/30"></div>
-      <div class="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
-        <div class="max-w-2xl" data-reveal>
-          <p class="eyebrow">Work with us</p>
-          <h2 class="mt-5 font-display text-5xl leading-[0.9] text-white sm:text-6xl">LET'S MAKE SOMETHING <span class="text-gradient-gold">WORTH WATCHING</span></h2>
-          <p class="mt-5 max-w-lg text-sm leading-relaxed text-white/55">Whether it is one room or an entire venue, we would love to hear about it.</p>
-          <a href="contact.html" class="btn btn-gold mt-8">Start a Conversation</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <div id="site-footer"></div>

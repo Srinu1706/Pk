@@ -39,6 +39,18 @@ python -m http.server 5199
 
 Then open <http://127.0.0.1:5199/>.
 
+## Theater 3D speaker visualizer
+
+The Theater page includes a Three.js speaker-layout visualizer. It is loaded as native ES modules through CDN import maps, so no npm or build step is required.
+
+Layout definitions are centralized in `assets/js/theater-layouts.js`. Each layout can be expanded by adding a speaker entry and its position, label, group and aim target, then adding the layout to the `SPEAKER_LAYOUTS` array.
+
+Visualizer modules and styles:
+
+- `assets/js/theater-layouts.js`
+- `assets/js/theater-visualizer.js`
+- `assets/css/theater-visualizer.css`
+
 You can also use VS Code Live Server or any static host (Netlify, Vercel, GitHub Pages, cPanel).
 
 ## Customising
