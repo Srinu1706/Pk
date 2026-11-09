@@ -59,6 +59,60 @@
 
   const pageKey = document.body.dataset.page || "home";
 
+  /* ---------------- Homepage intro ---------------- */
+  let shouldPlayIntro = false;
+  if (pageKey === "home") {
+    try {
+      shouldPlayIntro = sessionStorage.getItem("pk-intro-seen") !== "true";
+      if (shouldPlayIntro) sessionStorage.setItem("pk-intro-seen", "true");
+    } catch (error) {
+      console.warn("Could not save intro playback state for this tab:", error);
+    }
+  }
+
+  if (shouldPlayIntro) {
+    const intro = document.createElement("div");
+    intro.className = "site-intro";
+    intro.setAttribute("role", "dialog");
+    intro.setAttribute("aria-modal", "true");
+    intro.setAttribute("aria-label", "PK Entertainment introduction");
+    intro.innerHTML = `
+      <video class="site-intro__video" autoplay muted playsinline preload="auto" aria-label="PK Entertainment intro video">
+        <source src="assets/video/site-intro.mp4" type="video/mp4" />
+      </video>
+      <button class="site-intro__skip" type="button">Skip intro</button>
+    `;
+
+    const video = $("video", intro);
+    const skipButton = $(".site-intro__skip", intro);
+    let dismissed = false;
+    let loadTimer;
+    const onIntroKeydown = (event) => {
+      if (event.key === "Escape") closeIntro();
+    };
+    const closeIntro = () => {
+      if (dismissed) return;
+      dismissed = true;
+      window.clearTimeout(loadTimer);
+      document.body.classList.remove("intro-open");
+      document.removeEventListener("keydown", onIntroKeydown);
+      intro.remove();
+    };
+
+    skipButton.addEventListener("click", closeIntro);
+    video.addEventListener("ended", closeIntro, { once: true });
+    video.addEventListener("error", closeIntro, { once: true });
+    video.addEventListener("loadeddata", () => window.clearTimeout(loadTimer), { once: true });
+    document.addEventListener("keydown", onIntroKeydown);
+    document.body.classList.add("intro-open");
+    document.body.prepend(intro);
+    skipButton.focus();
+    loadTimer = window.setTimeout(closeIntro, 8000);
+
+    const playback = video.play();
+    if (playback) playback.catch(closeIntro);
+  }
+
   /* ---------------- Header ---------------- */
   const headerMount = $("#site-header");
   if (headerMount) {
@@ -139,7 +193,7 @@
         <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-[#105BFF]/5 blur-3xl"></div>
         <div class="relative mx-auto max-w-7xl px-6 pt-20 pb-10">
           <div class="grid gap-14 lg:grid-cols-[1.4fr_1fr_1.2fr]">
-            <div>
+            <div data-reveal>
               ${logo()}
               <p class="mt-6 max-w-sm text-sm leading-relaxed text-white/45">
                 Acoustically tuned private cinemas, smart homes and immersive spaces — designed, engineered and calibrated by a team that lives for the movies.
@@ -147,14 +201,14 @@
               <div class="mt-7 flex items-center gap-3">${socials("social-btn")}</div>
             </div>
 
-            <div class="lg:-mr-8">
+            <div class="lg:-mr-8" data-reveal data-delay="80">
               <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#FF8500]">Company</h4>
               <ul class="space-y-3">
                 ${NAV.map((n) => `<li><a class="footer-link" href="${n.href}">${n.label}</a></li>`).join("")}
               </ul>
             </div>
 
-            <div>
+            <div data-reveal data-delay="160">
               <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#FF8500]">Contact</h4>
               <ul class="space-y-4 text-sm text-white/50">
                 <li class="flex gap-3">
@@ -175,7 +229,7 @@
             </div>
           </div>
 
-          <div class="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/8 pt-7 text-[11px] text-white/30 md:flex-row">
+          <div class="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/8 pt-7 text-[11px] text-white/30 md:flex-row" data-reveal data-delay="120">
             <p>© ${new Date().getFullYear()} PK Entertainment. All rights reserved.</p>
             <p class="tracking-[0.18em] uppercase">Crafted for the love of cinema</p>
             <div class="flex items-center gap-5">
