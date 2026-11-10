@@ -13,7 +13,7 @@
   <script>
     tailwind.config = {
       theme: { extend: {
-        colors: { ink: "#21232E", coal: "#252731", panel: "#292C38", gold: "#FF8500", goldlight: "#FF8500", cream: "#FFFFFF" },
+        colors: { ink: "#1E0735", coal: "#2B0A4D", panel: "#38105F", gold: "#A855F7", goldlight: "#C4B5FD", cream: "#FFFFFF" },
         fontFamily: { sans: ["Outfit", "sans-serif"], display: ['"Bebas Neue"', "sans-serif"], serif: ['"Cormorant Garamond"', "serif"] },
       } },
     };
@@ -27,8 +27,8 @@
 
   <main>
     <!-- STORY -->
-    <section class="section about-story">
-      <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+    <section class="section about-story relative overflow-hidden">
+            <div class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
         <div class="relative" data-reveal="left">
           <img src="assets/img/mini theater 1.jpg" alt="Mini theater designed by PK Entertainment" class="aspect-[4/3] w-full object-cover" loading="lazy" />
         </div>
@@ -102,7 +102,7 @@
     </section>
 
     <!-- WHY PK -->
-    <section class="section border-y border-white/8 bg-[#292C38]">
+    <section class="section why-pk-section border-y border-white/8 bg-[#292C38]">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center" data-reveal>
           <p class="eyebrow eyebrow--center justify-center">Why choose us</p>
@@ -110,29 +110,24 @@
           <p class="mt-5 text-sm leading-relaxed text-white/45">Affordable, durable, and architecturally stunning private cinemas built with the latest audio-visual technology.</p>
         </div>
 
-        <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-          <div class="info-card" data-reveal>
-            <span class="value-num">01</span>
+        <div class="why-pk-grid mt-14 grid gap-5">
+          <div class="info-card why-pk-card" data-reveal>
             <h3 class="mt-4 font-display text-2xl tracking-wide text-white">Affordable</h3>
             <p class="mt-2 text-xs leading-relaxed text-white/45">Transparent turnkey pricing with no hidden charges. We make luxury home theater experiences achievable without sacrificing core fidelity.</p>
           </div>
-          <div class="info-card" data-reveal data-delay="60">
-            <span class="value-num">02</span>
+          <div class="info-card why-pk-card" data-reveal data-delay="60">
             <h3 class="mt-4 font-display text-2xl tracking-wide text-white">Durable</h3>
             <p class="mt-2 text-xs leading-relaxed text-white/45">Robust build standards, serviceable MAPS panels, premium cabling, and heavy-duty components built to perform reliably for years.</p>
           </div>
-          <div class="info-card" data-reveal data-delay="120">
-            <span class="value-num">03</span>
+          <div class="info-card why-pk-card" data-reveal data-delay="120">
             <h3 class="mt-4 font-display text-2xl tracking-wide text-white">Create a Premium Experience</h3>
             <p class="mt-2 text-xs leading-relaxed text-white/45">Bespoke interiors, customized seating, plush fabric finishes, and refined presentation that rival commercial multiplex VIP lounges.</p>
           </div>
-          <div class="info-card" data-reveal data-delay="180">
-            <span class="value-num">04</span>
+          <div class="info-card why-pk-card" data-reveal data-delay="180">
             <h3 class="mt-4 font-display text-2xl tracking-wide text-white">Ambient / Theater Ambience</h3>
             <p class="mt-2 text-xs leading-relaxed text-white/45">Immersive lighting choreography, fibre-optic starlight ceilings, cove glow, and light-rejecting screens creating authentic cinema mood.</p>
           </div>
-          <div class="info-card" data-reveal data-delay="240">
-            <span class="value-num">05</span>
+          <div class="info-card why-pk-card" data-reveal data-delay="240">
             <h3 class="mt-4 font-display text-2xl tracking-wide text-white">Latest Audio &amp; Video Tech</h3>
             <p class="mt-2 text-xs leading-relaxed text-white/45">4K/3D laser projection (Epson, Optoma, BenQ, Sony, LG, JVC, ViewSonic, Panasonic) and THX-certified audio (JBL, Klipsch, ELAC, Jamo, DALI, Sonodyne, Sonos, TAGA).</p>
           </div>
@@ -140,8 +135,173 @@
       </div>
     </section>
 
+
+<section class="section about-story">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+    <!-- Section Heading -->
+    <div class="mb-16 text-center" data-reveal="up">
+      <p class="eyebrow">Our Journey</p>
+
+      <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl lg:text-6xl">
+        A DECADE IN THE MAKING
+      </h2>
+
+      <p class="mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-white/55 sm:text-base">
+        We specialize in designing and building mini theaters,
+        transforming rooms of all sizes into immersive cinematic experiences.
+      </p>
+    </div>
+
+    <!-- Project Image and Introduction -->
+    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+
+      <div class="relative is-visible" data-reveal="left">
+        <img
+          src="assets/img/project6.jpg"
+          alt="PK Entertainment cinema project"
+          class="aspect-[4/3] w-full object-cover"
+          loading="lazy"
+        >
+      </div>
+
+      <div data-reveal="right" class="is-visible">
+        <p class="eyebrow">Our Story</p>
+
+        <h2 class="mt-5 font-display text-4xl leading-[0.95] text-white sm:text-5xl">
+          CREATING
+          <span class="text-gradient-gold">CINEMATIC</span>
+          EXPERIENCES
+        </h2>
+
+        <p class="mt-6 text-sm leading-relaxed text-white/55">
+          PK Entertainment specializes in designing and building mini
+          theaters, transforming ordinary rooms into immersive cinematic
+          experiences.
+        </p>
+
+        <p class="mt-4 text-sm leading-relaxed text-white/45">
+          From private home cinemas to boutique multiplexes, auditoriums
+          and corporate screening rooms, every project reflects our
+          commitment to thoughtful design and exceptional experiences.
+        </p>
+
+        <p class="mt-4 text-sm leading-relaxed text-white/45">
+          Our journey continues with a focus on sustainable, serviceable
+          and genuinely personal cinema design.
+        </p>
+
+        <!-- Statistics -->
+        <div class="mt-9 grid grid-cols-2 gap-4">
+
+          <div class="border border-white/10 bg-white/[0.02] p-5">
+            <p class="font-display text-3xl text-goldlight">
+              <span data-count="10" data-suffix="+">10+</span>
+            </p>
+            <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">
+              Cities served
+            </p>
+          </div>
+
+          <div class="border border-white/10 bg-white/[0.02] p-5">
+            <p class="font-display text-3xl text-goldlight">
+              <span data-count="250" data-suffix="+">250+</span>
+            </p>
+            <p class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/40">
+              Projects delivered
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="mt-24">
+
+      <div class="mb-12 text-center">
+        <p class="eyebrow">Our Milestones</p>
+        <h3 class="mt-5 font-display text-3xl leading-tight text-white sm:text-4xl">
+          THE JOURNEY SO FAR
+        </h3>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Milestone 1 -->
+        <div class="border border-white/10 bg-white/[0.02] p-7"
+             data-reveal="up">
+          <p class="font-display text-3xl text-goldlight">01</p>
+          <h4 class="mt-5 font-display text-xl text-white">
+            The first room
+          </h4>
+          <p class="mt-4 text-sm leading-relaxed text-white/50">
+            PK Entertainment is founded with a single private cinema
+            in Gurugram and a borrowed measurement microphone.
+          </p>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="border border-white/10 bg-white/[0.02] p-7"
+             data-reveal="up">
+          <p class="font-display text-3xl text-goldlight">02</p>
+          <h4 class="mt-5 font-display text-xl text-white">
+            MAPS takes shape
+          </h4>
+          <p class="mt-4 text-sm leading-relaxed text-white/50">
+            Development of the Modular Acoustic Panel System —
+            design freedom with full service access behind the panels.
+          </p>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="border border-white/10 bg-white/[0.02] p-7"
+             data-reveal="up">
+          <p class="font-display text-3xl text-goldlight">03</p>
+          <h4 class="mt-5 font-display text-xl text-white">
+            Beyond the home
+          </h4>
+          <p class="mt-4 text-sm leading-relaxed text-white/50">
+            The practice expands into boutique multiplexes,
+            auditoriums and corporate screening rooms across North India.
+          </p>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="border border-white/10 bg-white/[0.02] p-7"
+             data-reveal="up">
+          <p class="font-display text-3xl text-goldlight">04</p>
+          <h4 class="mt-5 font-display text-xl text-white">
+            250 projects
+          </h4>
+          <p class="mt-4 text-sm leading-relaxed text-white/50">
+            A milestone delivery year, with dedicated smart-automation
+            and acoustic calibration divisions added in-house.
+          </p>
+        </div>
+
+        <!-- Milestone 5 -->
+        <div class="border border-white/10 bg-white/[0.02] p-7 sm:col-span-2 lg:col-span-2"
+             data-reveal="up">
+          <p class="font-display text-3xl text-goldlight">05</p>
+          <h4 class="mt-5 font-display text-xl text-white">
+            The next chapter
+          </h4>
+          <p class="mt-4 text-sm leading-relaxed text-white/50">
+            Now serving 10+ cities, with a renewed focus on sustainable,
+            serviceable and genuinely personal cinema design.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
     <!-- TIMELINE -->
-    <section class="section">
+    <section class="section" style="display: none;">
       <div class="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
         <div data-reveal>
           <p class="eyebrow">Milestones</p>

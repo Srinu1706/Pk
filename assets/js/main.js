@@ -126,7 +126,7 @@
           ).join("")}
         </nav>
         <div class="flex items-center gap-4">
-          <button id="menu-open" class="grid h-11 w-11 place-items-center border border-white/15 text-white/80 transition hover:border-[#FF8500] hover:text-[#FF8500] lg:hidden" aria-label="Open menu" aria-expanded="false">
+          <button id="menu-open" class="grid h-11 w-11 place-items-center border border-white/15 text-white/80 transition hover:border-[#C4B5FD] hover:text-[#C4B5FD] lg:hidden" aria-label="Open menu" aria-expanded="false">
             ${ICONS.menu}
           </button>
         </div>
@@ -142,7 +142,7 @@
   drawer.innerHTML = `
     <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
       ${logo()}
-      <button id="menu-close" class="grid h-11 w-11 place-items-center border border-white/15 text-white/80 hover:border-[#FF8500] hover:text-[#FF8500] transition" aria-label="Close menu">
+      <button id="menu-close" class="grid h-11 w-11 place-items-center border border-white/15 text-white/80 hover:border-[#C4B5FD] hover:text-[#C4B5FD] transition" aria-label="Close menu">
         ${ICONS.close}
       </button>
     </div>
@@ -158,7 +158,7 @@
         <a href="${WA}" target="_blank" rel="noopener" class="btn btn-gold w-full">Book a Consultation ${ICONS.arrow}</a>
       </div>
       <div class="mt-10 flex items-center justify-between border-t border-white/10 pt-6">
-        <div class="flex items-center gap-3 text-white/50">${socials("hover:text-[#FF8500] transition")}</div>
+        <div class="flex items-center gap-3 text-white/50">${socials("hover:text-[#C4B5FD] transition")}</div>
       </div>
     </div>
   `;
@@ -189,8 +189,8 @@
   const footerMount = $("#site-footer");
   if (footerMount) {
     footerMount.innerHTML = `
-      <footer class="relative overflow-hidden border-t border-white/10 bg-[#21232E]">
-        <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-[#105BFF]/5 blur-3xl"></div>
+      <footer class="relative overflow-hidden border-t border-white/10 bg-[#1E0735]">
+        <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-[#8B5CF6]/5 blur-3xl"></div>
         <div class="relative mx-auto max-w-7xl px-6 pt-20 pb-10">
           <div class="grid gap-14 lg:grid-cols-[1.4fr_1fr_1.2fr]">
             <div data-reveal>
@@ -202,27 +202,27 @@
             </div>
 
             <div class="lg:-mr-8" data-reveal data-delay="80">
-              <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#FF8500]">Company</h4>
+              <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#C4B5FD]">Company</h4>
               <ul class="space-y-3">
                 ${NAV.map((n) => `<li><a class="footer-link" href="${n.href}">${n.label}</a></li>`).join("")}
               </ul>
             </div>
 
             <div data-reveal data-delay="160">
-              <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#FF8500]">Contact</h4>
+              <h4 class="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#C4B5FD]">Contact</h4>
               <ul class="space-y-4 text-sm text-white/50">
                 <li class="flex gap-3">
-                  <span class="mt-0.5 text-[#FF8500]">${ICONS.phone.replace('<svg','<svg class="w-4 h-4"')}</span>
+                  <span class="mt-0.5 text-[#C4B5FD]">${ICONS.phone.replace('<svg','<svg class="w-4 h-4"')}</span>
                   <span>
-                    <a href="tel:${PHONE_1_LINK}" class="block hover:text-[#FF8500]">${PHONE_1}</a>
+                    <a href="tel:${PHONE_1_LINK}" class="block hover:text-[#C4B5FD]">${PHONE_1}</a>
                   </span>
                 </li>
                 <li class="flex gap-3">
-                  <span class="mt-0.5 text-[#FF8500]">${ICONS.mail.replace('<svg','<svg class="w-4 h-4"')}</span>
-                  <a href="mailto:${EMAIL}" class="hover:text-[#FF8500]">${EMAIL}</a>
+                  <span class="mt-0.5 text-[#C4B5FD]">${ICONS.mail.replace('<svg','<svg class="w-4 h-4"')}</span>
+                  <a href="mailto:${EMAIL}" class="hover:text-[#C4B5FD]">${EMAIL}</a>
                 </li>
                 <li class="flex gap-3">
-                  <span class="mt-0.5 shrink-0 text-[#FF8500]">${ICONS.pin.replace('<svg','<svg class="w-4 h-4"')}</span>
+                  <span class="mt-0.5 shrink-0 text-[#C4B5FD]">${ICONS.pin.replace('<svg','<svg class="w-4 h-4"')}</span>
                   <span class="leading-relaxed">48-3-55/1, Day &amp; Night Hospital Road,<br/>Near Rama Talkies, Srinagar,<br/>VISAKHAPATNAM -530016</span>
                 </li>
               </ul>
@@ -233,8 +233,8 @@
             <p>© ${new Date().getFullYear()} PK Entertainment. All rights reserved.</p>
             <p class="tracking-[0.18em] uppercase">Crafted for the love of cinema</p>
             <div class="flex items-center gap-5">
-              <a href="privacy-policy.html" class="hover:text-[#FF8500]">Privacy</a>
-              <a href="terms-conditions.html" class="hover:text-[#FF8500]">Terms</a>
+              <a href="privacy-policy.html" class="hover:text-[#C4B5FD]">Privacy</a>
+              <a href="terms-conditions.html" class="hover:text-[#C4B5FD]">Terms</a>
             </div>
           </div>
         </div>
@@ -540,6 +540,8 @@
 
   /* ---------------- Forms ---------------- */
   $$("form[data-contact-form]").forEach((form) => {
+    if (form.hasAttribute("data-emailjs-form")) return;
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       let valid = true;

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none" preserveAspectRatio="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="p-band" x1="0" y1="560" x2="1600" y2="880" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.34" />
+      <stop offset="0.3" stop-color="#8B5CF6" stop-opacity="0.52" />
+      <stop offset="0.58" stop-color="#A855F7" stop-opacity="0.3" />
+      <stop offset="0.82" stop-color="#7C3AED" stop-opacity="0.5" />
+      <stop offset="1" stop-color="#6D28D9" stop-opacity="0.44" />
+    </linearGradient>
+
+    <linearGradient id="p-lav" x1="0" y1="520" x2="1600" y2="880" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#C4B5FD" stop-opacity="0" />
+      <stop offset="0.22" stop-color="#C4B5FD" stop-opacity="0.24" />
+      <stop offset="0.48" stop-color="#A78BFA" stop-opacity="0.4" />
+      <stop offset="0.74" stop-color="#C084FC" stop-opacity="0.28" />
+      <stop offset="1" stop-color="#DDD6FE" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="p-top" x1="0" y1="0" x2="1600" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0" />
+      <stop offset="0.25" stop-color="#8B5CF6" stop-opacity="0.36" />
+      <stop offset="0.55" stop-color="#A855F7" stop-opacity="0.46" />
+      <stop offset="0.8" stop-color="#C084FC" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="p-edge" x1="0" y1="0" x2="1600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#EDE9FE" stop-opacity="0" />
+      <stop offset="0.18" stop-color="#EDE9FE" stop-opacity="0.85" />
+      <stop offset="0.42" stop-color="#DDD6FE" stop-opacity="0.7" />
+      <stop offset="0.66" stop-color="#C4B5FD" stop-opacity="0.55" />
+      <stop offset="0.86" stop-color="#A855F7" stop-opacity="0.42" />
+      <stop offset="1" stop-color="#DDD6FE" stop-opacity="0" />
+    </linearGradient>
+
+    <radialGradient id="p-glow-core" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#B06BFF" stop-opacity="0.55" />
+      <stop offset="0.42" stop-color="#8B5CF6" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#6D28D9" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="p-glow-left" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#A855F7" stop-opacity="0.42" />
+      <stop offset="0.5" stop-color="#7C3AED" stop-opacity="0.18" />
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="p-glow-right" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#C084FC" stop-opacity="0.4" />
+      <stop offset="0.55" stop-color="#8B5CF6" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="p-blur-xl" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="52" />
+    </filter>
+    <filter id="p-blur-lg" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+    <filter id="p-blur-sm" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" />
+    </filter>
+  </defs>
+
+  <!-- Luminous purple ambience -->
+  <g filter="url(#p-blur-xl)">
+    <ellipse cx="1110" cy="410" rx="600" ry="420" fill="url(#p-glow-core)" />
+    <ellipse cx="120" cy="760" rx="560" ry="300" fill="url(#p-glow-left)" />
+    <ellipse cx="1560" cy="520" rx="440" ry="380" fill="url(#p-glow-right)" />
+  </g>
+
+  <!-- Top silk ribbons -->
+  <g>
+    <path d="M-90 74C210 12 416 152 700 150S1170 44 1690 96V196C1170 144 986 252 700 252S210 112-90 174Z" fill="url(#p-top)" opacity="0.66" />
+    <path d="M-90 74C210 12 416 152 700 150S1170 44 1690 96" stroke="url(#p-edge)" stroke-width="22" stroke-linecap="round" opacity="0.42" filter="url(#p-blur-sm)" />
+    <path d="M-90 74C210 12 416 152 700 150S1170 44 1690 96" stroke="url(#p-edge)" stroke-width="3.4" stroke-linecap="round" opacity="1" />
+    <path d="M-90 196C230 140 430 276 730 266S1180 168 1690 220" stroke="url(#p-edge)" stroke-width="1.2" stroke-linecap="round" opacity="0.42" />
+  </g>
+
+  <!-- Soft mid fold -->
+  <path d="M-90 438C220 336 446 520 790 498S1250 342 1690 388V462C1250 416 1134 574 790 596S220 412-90 514Z" fill="url(#p-lav)" opacity="0.34" />
+
+  <!-- Main flowing wave -->
+  <g>
+    <path d="M-90 612C250 482 460 700 820 690S1300 490 1690 548V900H-90Z" fill="url(#p-band)" opacity="0.92" />
+    <path d="M-90 612C250 482 460 700 820 690S1300 490 1690 548" stroke="url(#p-edge)" stroke-width="28" stroke-linecap="round" opacity="0.44" filter="url(#p-blur-sm)" />
+    <path d="M-90 612C250 482 460 700 820 690S1300 490 1690 548" stroke="url(#p-edge)" stroke-width="4" stroke-linecap="round" opacity="1" />
+    <path d="M-90 704C270 586 476 800 842 792S1320 604 1690 654" stroke="url(#p-edge)" stroke-width="1.3" stroke-linecap="round" opacity="0.38" />
+  </g>
+
+  <!-- Bottom lavender crest -->
+  <g>
+    <path d="M-90 790C280 688 524 862 906 852S1408 726 1690 764V900H-90Z" fill="url(#p-lav)" opacity="0.74" />
+    <path d="M-90 790C280 688 524 862 906 852S1408 726 1690 764" stroke="url(#p-edge)" stroke-width="20" stroke-linecap="round" opacity="0.42" filter="url(#p-blur-sm)" />
+    <path d="M-90 790C280 688 524 862 906 852S1408 726 1690 764" stroke="url(#p-edge)" stroke-width="3.2" stroke-linecap="round" opacity="0.78" />
+    <path d="M-90 846C300 764 556 890 930 882S1420 806 1690 834" stroke="url(#p-edge)" stroke-width="1" stroke-linecap="round" opacity="0.28" />
+  </g>
+
+  <!-- Fine highlight accents -->
+  <path d="M-90 540C260 440 474 646 830 630S1280 470 1690 512" stroke="url(#p-edge)" stroke-width="1" stroke-linecap="round" opacity="0.3" />
+</svg>
